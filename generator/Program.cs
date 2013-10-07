@@ -342,7 +342,7 @@ Globalize.addCultureInfo( ""{0}"", ""default"", {{
                 return string.Format(CultureInfo.InvariantCulture, @"/*
  * Globalize Culture {0}
  *
- * http://github.com/jquery/globalize
+ * https://github.com/mleavitt/globalize/tree/amd
  *
  * Copyright Software Freedom Conservancy, Inc.
  * Dual licensed under the MIT or GPL Version 2 licenses.
@@ -352,25 +352,15 @@ Globalize.addCultureInfo( ""{0}"", ""default"", {{
  * Translation: bugs found in this file need to be fixed in the generator
  */
 
-(function( window, undefined ) {{
+define( function( require ) {
 
-var Globalize;
-
-if ( typeof require !== ""undefined"" &&
-	typeof exports !== ""undefined"" &&
-	typeof module !== ""undefined"" ) {{
-	// Assume CommonJS
-	Globalize = require( ""globalize"" );
-}} else {{
-	// Global variable
-	Globalize = window.Globalize;
-}}
+var Globalize = require( ""globalize"" );
 
 Globalize.addCultureInfo( ""{0}"", ""default"", {{
 {1}
 }});
 
-}}( this ));
+});
 ", name, cultureFragment);
         }
 
@@ -619,7 +609,7 @@ Globalize.addCultureInfo( ""{0}"", ""default"", {{
 {1}
 }});
 
-}}( this ));
+});
 "
 */
 
@@ -627,7 +617,7 @@ Globalize.addCultureInfo( ""{0}"", ""default"", {{
     @"/*
  * Globalize Cultures
  *
- * http://github.com/jquery/globalize
+ * https://github.com/mleavitt/globalize/tree/amd
  *
  * Copyright Software Freedom Conservancy, Inc.
  * Dual licensed under the MIT or GPL Version 2 licenses.
@@ -637,19 +627,10 @@ Globalize.addCultureInfo( ""{0}"", ""default"", {{
  * Translation: bugs found in this file need to be fixed in the generator
  */
 
-(function( window, undefined ) {
+define( function( require ) {
 
-var Globalize;
+var Globalize = require( ""globalize"" );
 
-if ( typeof require !== ""undefined"" &&
-	typeof exports !== ""undefined"" &&
-	typeof module !== ""undefined"" ) {
-	// Assume CommonJS
-	Globalize = require( ""globalize"" );
-} else {
-	// Global variable
-	Globalize = window.Globalize;
-}
 ");
 
             int count = 0;
