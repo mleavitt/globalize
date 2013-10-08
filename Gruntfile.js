@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( "grunt-contrib-clean" );
 
 	// Default task.
-	grunt.registerTask( "default", [ "jshint", "clean", "uglify", "qunit" ] );
+	grunt.registerTask( "default", [ "jshint", "clean", "uglify"] ); //, "qunit" ] );
 
 };
 

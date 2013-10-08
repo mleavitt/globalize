@@ -12,5 +12,13 @@
 	"undef": true,
 	"unused": true,
 
-	"node": true
+	"node": true,
+
+	"globals": {
+		"define": true,
+		"exports": true,
+		"module": true,
+		"require": true,
+		"window": true
+	}
 }
